@@ -61,6 +61,8 @@ I’m building a public, source-linked knowledge base that connects AI research 
 ## 🤝 Connect | 交流合作
 
 If you work on foundation models, are exploring your next opportunity, or are building an AI research team, I welcome a thoughtful conversation.
+Wechat：Aholic23333
+Red：Justin.  6800249808
 
 如果你从事大语言模型、多模态或生成模型研究，或者关注 Agent、AI Infra 相关岗位与职业发展，欢迎交流。
 
