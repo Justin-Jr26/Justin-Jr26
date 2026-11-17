@@ -226,6 +226,26 @@
       *,*:before,*:after{animation:none!important;transition:none!important}
       [data-reveal]{opacity:1;transform:none}
     }
+
+    /* Hiring desk: reserved categories before approved JDs are supplied */
+    .roles-section{background:var(--maroon-dk);color:#f8efe9}
+    .roles-section .section-label{color:#eabfc0}
+    .roles-section .section-sub{color:#ddc8c6}
+    .roles-section .section-title em{font-weight:400;color:#e3aeb3}
+    .roles-headline{border-top:1px solid rgba(255,247,241,.53);border-bottom:1px solid rgba(255,247,241,.32);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 2px;margin-top:10px}
+    .roles-headline .upper{color:#f1d4d1}
+    .roles-pending{display:inline-flex;gap:9px;align-items:center;color:#ebd3d0;font-family:var(--mono);font-size:10px;letter-spacing:.04em}
+    .pending-dot{background:#e9b8b8;width:7px;height:7px;border-radius:50%}
+    .roles-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:24px}
+    .role-card{min-height:294px;padding:29px 25px 21px;border:1px solid rgba(255,245,237,.29);display:flex;flex-direction:column;background:rgba(255,255,255,.035)}
+    .role-num{color:#eac4c1;font-family:var(--mono);font-size:10px;letter-spacing:.12em}
+    .role-card h3{font-family:var(--serif);font-size:clamp(27px,2.8vw,36px);line-height:1.18;letter-spacing:-.045em;font-weight:400;margin:30px 0 16px}
+    .role-card p{font-size:13px;line-height:1.8;color:#e5d0cd;margin:0 0 22px}
+    .role-footer{display:flex;justify-content:space-between;gap:13px;align-items:center;margin-top:auto;padding-top:17px;border-top:1px solid rgba(255,247,241,.2);font-family:var(--mono);color:#d9bcb9;font-size:9px;letter-spacing:.05em}
+    .role-footer>span:last-child{font-family:var(--sans);font-size:17px}
+    .roles-disclaimer{color:#d9bcb9;font-size:12px;line-height:1.75;margin:24px 0 0;max-width:920px}
+    @media(max-width:760px){.roles-grid{grid-template-columns:1fr}.role-card{min-height:235px}.roles-headline{align-items:flex-start;flex-direction:column}}
+
   </style>
   <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
 </head>
@@ -340,23 +360,45 @@
         </div>
       </div>
     </section>
-    <section class="section adjacent-section">
+    <section class="section roles-section" id="opportunities">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <div><div class="section-label"><span class="en">RELATED SYSTEMS</span><span class="zh">关联技术方向</span></div><h2 class="section-title en">Beyond the<br>foundation.</h2><h2 class="section-title zh">从基座模型，<br>走向应用与系统。</h2></div>
-          <p class="section-sub en">An ongoing look at the application and infrastructure layers that bring model capabilities into working systems.</p>
-          <p class="section-sub zh">持续理解模型能力如何通过应用与基础设施转化为可用系统，以及相关的工程人才需求。</p>
+          <div><div class="section-label"><span class="en">03 — FEATURED OPPORTUNITIES</span><span class="zh">03 — 热招岗位</span></div>
+            <h2 class="section-title en">Opportunities,<br><em>curated.</em></h2>
+            <h2 class="section-title zh">值得关注的<br><em>职业机会。</em></h2>
+          </div>
+          <p class="section-sub en">A curated window into hiring needs across the foundation-model ecosystem. Specific roles, teams and job descriptions will be published here once organized and cleared for sharing.</p>
+          <p class="section-sub zh">整理我所合作与关注的基座模型团队招聘需求。具体岗位、团队信息与 JD 将在确认有效性及公开权限后陆续展示。</p>
         </div>
-        <div class="adjacent-grid">
-          <article class="adjacent-card" data-reveal>
-            <div class="top">04 / APPLICATIONS</div>
-            <div><h3>Agent Applications</h3><p class="en">Tool use, coding agents, workflows, evaluation and real-world applications.</p><p class="zh">工具调用、编程智能体、工作流、评估与真实业务场景应用。</p></div>
+        <div class="roles-headline">
+          <div class="upper"><span class="en">HIRING DESK / CURRENT EDITION</span><span class="zh">招聘情报 / 当前版本</span></div>
+          <div class="roles-pending"><span class="pending-dot"></span><span class="en">Job details in preparation</span><span class="zh">具体 JD 整理中</span></div>
+        </div>
+        <div class="roles-grid">
+          <article class="role-card" data-reveal>
+            <div class="role-num">01 / LLM</div>
+            <h3>Foundation Model<br>Training & RL</h3>
+            <p class="en">Pre-training data, mid-training, post-training, reinforcement learning and model capability development.</p>
+            <p class="zh">Pre-train Data、Mid-train、Post-train、RL 及模型能力训练方向。</p>
+            <div class="role-footer"><span class="en">AREA OF INTEREST · JD PENDING</span><span class="zh">关注方向 · JD 待补充</span><span aria-hidden="true">◇</span></div>
           </article>
-          <article class="adjacent-card" data-reveal>
-            <div class="top">05 / SYSTEMS</div>
-            <div><h3>AI Infrastructure</h3><p class="en">Distributed training systems, data infrastructure, inference and engineering efficiency.</p><p class="zh">分布式训练系统、数据基础设施、推理服务与工程效率优化。</p></div>
+          <article class="role-card" data-reveal>
+            <div class="role-num">02 / MULTIMODAL</div>
+            <h3>VLM & Visual<br>Intelligence</h3>
+            <p class="en">Unified generation and understanding, Visual Coding, Web Dev and related research.</p>
+            <p class="zh">生成理解统一、Visual Coding、Web Dev 及相关多模态研究方向。</p>
+            <div class="role-footer"><span class="en">AREA OF INTEREST · JD PENDING</span><span class="zh">关注方向 · JD 待补充</span><span aria-hidden="true">◇</span></div>
+          </article>
+          <article class="role-card" data-reveal>
+            <div class="role-num">03 / GENERATIVE</div>
+            <h3>Image & Video<br>Generation</h3>
+            <p class="en">Image/video foundation models, generative training research and training systems.</p>
+            <p class="zh">图像与视频生成基座模型、生成式训练研究及训练系统方向。</p>
+            <div class="role-footer"><span class="en">AREA OF INTEREST · JD PENDING</span><span class="zh">关注方向 · JD 待补充</span><span aria-hidden="true">◇</span></div>
           </article>
         </div>
+        <p class="roles-disclaimer en">These are categories reserved for upcoming job descriptions, not verified live openings. Specific vacancies will only be listed after their details and publication permissions are confirmed.</p>
+        <p class="roles-disclaimer zh">以上是待补充具体 JD 的方向分类，并非已经核实的实时招聘岗位。后续会在确认岗位信息及发布权限后更新具体职位。</p>
       </div>
     </section>
     <section class="section archive-section" id="archive">
