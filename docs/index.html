@@ -268,6 +268,27 @@
     .wechat-qr-image{display:block;width:100%;height:auto;image-rendering:auto}
     @media(max-width:440px){.qr-note{align-items:flex-start;gap:12px}.wechat-qr-frame{width:123px;flex-basis:123px}}
 
+
+    /* Intelligence desk: three editorial columns */
+    .intelligence-section{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .intel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:10px}
+    .intel-card{background:#f7f2eb;border:1px solid var(--line);padding:27px 24px 22px;min-height:405px;display:flex;flex-direction:column;transition:border-color .2s,background .2s}
+    .intel-card:hover{border-color:#9b7779;background:#fcf8f2}
+    .intel-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .intel-number{font:10px var(--mono);letter-spacing:.1em;color:var(--maroon)}
+    .intel-tag{font:9px var(--mono);letter-spacing:.07em;color:#85736c;border:1px solid #d0c1b7;padding:4px 7px}
+    .intel-card h3{font:normal clamp(30px,3vw,39px)/1.15 var(--serif);letter-spacing:-.045em;margin:32px 0 13px}
+    .intel-lead{font-size:13px;color:var(--soft);line-height:1.8;margin:0 0 14px;min-height:70px}
+    .intel-card ul{list-style:none;padding:0;margin:8px 0 25px}
+    .intel-card li{font-size:12px;line-height:1.75;color:#5f5751;padding:0 0 12px;display:flex;gap:8px}
+    .intel-card li:before{content:"—";color:var(--maroon);flex-shrink:0}
+    .intel-bottom{margin-top:auto;padding-top:15px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:5px}
+    .intel-bottom span{font:9px var(--mono);letter-spacing:.1em;color:var(--maroon)}
+    .intel-bottom strong{font-size:11px;font-weight:600;color:#514743;line-height:1.6}
+    .intel-disclaimer{font-size:11px;line-height:1.8;color:var(--faint);margin:24px 0 0;max-width:920px}
+    @media(max-width:900px){.intel-grid{grid-template-columns:1fr 1fr}.intel-card:last-child{grid-column:1/-1;min-height:340px}}
+    @media(max-width:760px){.intel-grid{grid-template-columns:1fr}.intel-card:last-child{grid-column:auto;min-height:0}.intel-card{min-height:0}.intel-lead{min-height:0}}
+
   </style>
   <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
 </head>
@@ -287,10 +308,9 @@
     <div class="nav-bar"><div class="container nav-inner">
       <nav class="nav-list" aria-label="Main navigation">
         <a href="#about"><span class="en">01 / About</span><span class="zh">01 / 关于我</span></a>
-        <a href="#focus"><span class="en">02 / Fields</span><span class="zh">02 / 研究领域</span></a>
-        <a href="#opportunities"><span class="en">03 / Opportunities</span><span class="zh">03 / 热招岗位</span></a>
-        <a href="#archive"><span class="en">04 / Archive</span><span class="zh">04 / 知识档案</span></a>
-        <a href="#contact"><span class="en">05 / Contact</span><span class="zh">05 / 交流联系</span></a>
+        <a href="#opportunities"><span class="en">02 / Open roles</span><span class="zh">02 / 热招岗位</span></a>
+        <a href="#intelligence"><span class="en">03 / Intelligence</span><span class="zh">03 / 行业情报</span></a>
+        <a href="#contact"><span class="en">04 / Contact</span><span class="zh">04 / 联系方式</span></a>
       </nav>
       <a class="nav-contact" href="https://github.com/Justin-Jr26" target="_blank" rel="noopener noreferrer">GITHUB <span aria-hidden="true">↗</span></a>
     </div></div>
@@ -307,13 +327,13 @@
           <p class="hero-note en">I work with the major leading foundation-model teams across China, with direct, first-hand access to their hiring priorities. Close conversations with people on these teams also inform my perspective on team developments, technology shifts and the AI talent landscape.</p>
           <p class="hero-note zh">目前与国内主要头部基座模型团队均有合作，持续获得一线岗位信息；也通过与团队成员的密切交流，关注团队动态、技术热点与人才市场的前沿变化。</p>
           <div class="hero-actions">
-            <a class="action primary" href="#focus"><span class="en">EXPLORE MY FOCUS</span><span class="zh">了解研究方向</span> <span class="arrow" aria-hidden="true">↗</span></a>
-            <a class="action ghost" href="#archive"><span class="en">OPEN THE ARCHIVE</span><span class="zh">查看知识档案</span> <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="action primary" href="#opportunities"><span class="en">EXPLORE OPEN ROLES</span><span class="zh">查看热招岗位</span> <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="action ghost" href="#intelligence"><span class="en">FOLLOW INDUSTRY SIGNALS</span><span class="zh">关注行业情报</span> <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="cover" aria-label="Abstract editorial cover artwork representing people, research and AI">
           <div class="cover-paper">
-            <div class="cover-top"><span>JUSTIN J. / RESEARCH</span><span>VOL. 001 — 2026</span></div>
+            <div class="cover-top"><span>JUSTIN J. / INTELLIGENCE</span><span>VOL. 001 — 2026</span></div>
             <div class="cover-art" aria-hidden="true">
               <div class="cover-ring four"></div><div class="cover-ring three"></div><div class="cover-ring"></div><div class="cover-ring two"></div>
               <div class="cover-slash"></div><div class="cover-slash t"></div>
@@ -322,15 +342,15 @@
             </div>
             <div class="cover-bottom">
               <h2>THE HUMAN<br>SIDE OF AI.</h2>
-              <div class="footerline"><span>Research / People</span><span>Independent notes ↗</span></div>
+              <div class="footerline"><span>Talent / Industry</span><span>Field signals ↗</span></div>
             </div>
           </div>
         </div>
       </div>
       <div class="hero-foot">
-        <div class="stat"><b>03</b><span class="en">CORE RESEARCH<br>FIELDS</span><span class="zh">核心专注<br>技术方向</span></div>
-        <div class="stat"><b>02</b><span class="en">ADJACENT<br>AREAS</span><span class="zh">延伸关注<br>技术领域</span></div>
-        <div class="stat"><b>01</b><span class="en">PUBLIC KNOWLEDGE<br>PROJECT</span><span class="zh">已上线<br>公开知识项目</span></div>
+        <div class="stat"><b>03</b><span class="en">FEATURED<br>ROLES</span><span class="zh">精选发布<br>岗位信息</span></div>
+        <div class="stat"><b>03</b><span class="en">INTELLIGENCE<br>COLUMNS</span><span class="zh">行业情报<br>观察栏目</span></div>
+        <div class="stat"><b>01</b><span class="en">PUBLIC RESEARCH<br>PROJECT</span><span class="zh">公开研究<br>项目</span></div>
       </div>
     </section>
     <section class="section about-section" id="about">
@@ -350,72 +370,40 @@
         </div>
       </div>
     </section>
-    <section class="section index-section" id="focus">
-      <div class="container">
-        <div class="section-heading" data-reveal>
-          <div><div class="section-label"><span class="en">02 — FOCUS AREAS</span><span class="zh">02 — 关注方向</span></div><h2 class="section-title en">A field guide to<br>foundation models.</h2><h2 class="section-title zh">基座模型<br>研究观察。</h2></div>
-          <p class="section-sub en">Three connected disciplines, understood through technical progress, the teams behind it, and the roles involved.</p>
-          <p class="section-sub zh">从技术演进、研发团队和岗位能力三个角度，持续观察相互关联的基座模型研究领域。</p>
-        </div>
-        <div class="index-list">
-          <article class="index-item" data-reveal>
-            <div class="index-no">[ 01 ]</div>
-            <div><h3 class="en">Language<br>Model Training</h3><h3 class="zh">大语言模型<br>训练全链路</h3><span class="mini-tag">PRE-TRAIN / DATA / MID-TRAIN / POST-TRAIN / RL</span></div>
-            <p class="en">Across pre-training data, pre-training, mid-training, post-training and reinforcement learning — also tracking model training for Coding Agents and Work Agents.</p>
-            <p class="zh">从 Pre-train Data、Pre-train、Mid-train 到 Post-train、RL，延伸关注 Coding Agent、Work Agent 等模型能力与相关训练方向。</p>
-            <a href="https://github.com/Justin-Jr26/foundation-model-radar/blob/main/research/llm-pretraining.md" target="_blank" rel="noopener noreferrer" class="index-arrow" aria-label="Read LLM foundation research note">↗</a>
-          </article>
-          <article class="index-item" data-reveal>
-            <div class="index-no">[ 02 ]</div>
-            <div><h3 class="en">Multimodal<br>Intelligence</h3><h3 class="zh">多模态<br>模型与能力</h3><span class="mini-tag">VLM / UNIFIED GENERATION & UNDERSTANDING</span></div>
-            <p class="en">Focused on VLMs, unified models for generation and understanding, and the training behind Visual Coding and Web Dev capabilities.</p>
-            <p class="zh">聚焦 VLM、生成理解统一模型，以及 Visual Coding、Web Dev 等多模态能力和相关训练研究。</p>
-            <a href="https://github.com/Justin-Jr26/foundation-model-radar/blob/main/research/multimodal-foundation-models.md" target="_blank" rel="noopener noreferrer" class="index-arrow" aria-label="Read multimodal research note">↗</a>
-          </article>
-          <article class="index-item" data-reveal>
-            <div class="index-no">[ 03 ]</div>
-            <div><h3 class="en">Generative<br>Models</h3><h3 class="zh">生成模型<br>基础训练</h3><span class="mini-tag">IMAGE / VIDEO / DIFFUSION / DiT</span></div>
-            <p class="en">The research and talent landscape behind image and video generation foundations, from generative modeling to large-scale training.</p>
-            <p class="zh">关注图像、视频生成基座模型，从生成建模方法到大规模训练技术及相关人才。</p>
-            <a href="https://github.com/Justin-Jr26/foundation-model-radar/blob/main/research/generative-models.md" target="_blank" rel="noopener noreferrer" class="index-arrow" aria-label="Read generative-model research note">↗</a>
-          </article>
-        </div>
-      </div>
-    </section>
     <section class="section roles-section" id="opportunities">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <div><div class="section-label"><span class="en">03 — FEATURED OPPORTUNITIES</span><span class="zh">03 — 热招岗位</span></div>
+          <div><div class="section-label"><span class="en">02 — OPEN ROLES</span><span class="zh">02 — 岗位信息</span></div>
             <h2 class="section-title en">Opportunities,<br><em>curated.</em></h2>
             <h2 class="section-title zh">值得关注的<br><em>职业机会。</em></h2>
           </div>
-          <p class="section-sub en">Selected foundation-model research roles. Explore the responsibilities and qualifications for each position below.</p>
-          <p class="section-sub zh">精选基座模型研发岗位。点击岗位卡片，查看完整职责、任职条件及技术方向。</p>
+          <p class="section-sub en">Selected opportunities across foundation-model teams. This section focuses on real roles, responsibilities and qualifications — not technical explainers.</p>
+          <p class="section-sub zh">集中发布基座模型相关岗位信息，重点呈现真实职位、岗位职责与任职要求，暂不展开各技术方向的原理分析。</p>
         </div>
         <div class="roles-headline">
-          <div class="upper"><span class="en">HIRING DESK / THREE ROLE BRIEFS</span><span class="zh">招聘情报 / 3 份岗位说明</span></div>
-          <div class="roles-pending"><span class="pending-dot"></span><span class="en">Role descriptions available</span><span class="zh">岗位 JD 已上线</span></div>
+          <div class="upper"><span class="en">HIRING DESK / FEATURED POSITIONS</span><span class="zh">岗位发布 / 当前精选职位</span></div>
+          <div class="roles-pending"><span class="pending-dot"></span><span class="en">3 role descriptions available</span><span class="zh">3 份岗位 JD 已上线</span></div>
         </div>
         <div class="roles-grid">
           <a class="role-card" href="./open-roles.html#role-llm" data-reveal>
             <div class="role-num">01 / LLM FOUNDATION TRAINING</div>
             <h3 class="zh">LLM-预训练<br>算法工程师</h3><h3 class="en">LLM Pre-training<br>Research Engineer</h3>
-            <p class="zh">模型结构与 MoE、Scaling Laws、数据策略、分布式训练与稳定性。</p>
-            <p class="en">Model architecture & MoE, scaling laws, data strategy, distributed training and stability.</p>
+            <p class="zh">大语言模型预训练算法方向，点击查看完整岗位职责与任职要求。</p>
+            <p class="en">LLM pre-training role. Open the full brief for responsibilities and qualifications.</p>
             <div class="role-footer"><span class="en">VIEW FULL JD & REQUIREMENTS</span><span class="zh">查看岗位职责与要求</span><span aria-hidden="true">↗</span></div>
           </a>
           <a class="role-card" href="./open-roles.html#role-vlm" data-reveal>
             <div class="role-num">02 / MULTIMODAL UNDERSTANDING</div>
             <h3 class="zh">多模理解-视觉语言<br>大模型研究员</h3><h3 class="en">Vision-Language<br>Model Researcher</h3>
-            <p class="zh">ViT Pretrain、VLM Pretrain / Post Train、生成理解统一架构。</p>
-            <p class="en">ViT and VLM pre-training, VLM post-training, unified generation and understanding.</p>
+            <p class="zh">视觉语言大模型研究方向，点击查看完整岗位职责与任职要求。</p>
+            <p class="en">Vision-language model research role. Open the full brief for responsibilities and qualifications.</p>
             <div class="role-footer"><span class="en">VIEW FULL JD & REQUIREMENTS</span><span class="zh">查看岗位职责与要求</span><span aria-hidden="true">↗</span></div>
           </a>
           <a class="role-card" href="./open-roles.html#role-video" data-reveal>
             <div class="role-num">03 / VIDEO GENERATION</div>
             <h3 class="zh">视频生成基座模型<br>算法专家</h3><h3 class="en">Video Foundation Model<br>Algorithm Expert</h3>
-            <p class="zh">视频生成基座全流程研发、Diffusion / Transformer、SFT 与对齐优化。</p>
-            <p class="en">End-to-end video generation foundations, Diffusion / Transformer, SFT and alignment.</p>
+            <p class="zh">视频生成基座模型算法方向，点击查看完整岗位职责与任职要求。</p>
+            <p class="en">Video generation foundation-model role. Open the full brief for responsibilities and qualifications.</p>
             <div class="role-footer"><span class="en">VIEW FULL JD & REQUIREMENTS</span><span class="zh">查看岗位职责与要求</span><span aria-hidden="true">↗</span></div>
           </a>
         </div>
@@ -423,35 +411,63 @@
         <p class="roles-disclaimer zh">以上根据已提供的岗位说明整理；公司、工作地点、薪酬及实时招聘进展暂不在网页披露，具体信息请与 Justin J. 沟通确认。</p>
       </div>
     </section>
-    <section class="section archive-section" id="archive">
+    <section class="section intelligence-section" id="intelligence">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <div><div class="section-label"><span class="en">04 — THE LIVING ARCHIVE</span><span class="zh">04 — 持续更新的知识档案</span></div><h2 class="section-title en">Notes, indexed.</h2><h2 class="section-title zh">让研究，<br>有所积累。</h2></div>
-          <p class="section-sub en">A growing set of publicly sourced research notes and technical role frameworks. Real projects first; more material will follow.</p>
-          <p class="section-sub zh">逐步沉淀可追溯来源的技术笔记和岗位能力地图。先展示真实项目，再持续补充内容。</p>
-        </div>
-        <a class="archive-lead" href="https://github.com/Justin-Jr26/foundation-model-radar" target="_blank" rel="noopener noreferrer" data-reveal>
           <div>
-            <div class="micro">PUBLIC PROJECT / 001 <span class="en">· AVAILABLE ON GITHUB</span><span class="zh">· GITHUB 已上线</span></div>
-            <h3>Foundation Model<br>Radar <span style="font-family:var(--sans);font-size:.57em;color:var(--maroon)" aria-hidden="true">↗</span></h3>
-            <p class="en">A public research notebook connecting foundation-model technology, engineering roles and the AI talent landscape.</p>
-            <p class="zh">一份公开研究手记，连接基座模型技术路线、工程岗位能力和 AI 人才生态。</p>
-            <span class="upper" style="color:var(--maroon)">EXPLORE REPOSITORY →</span>
+            <div class="section-label"><span class="en">03 — INDUSTRY INTELLIGENCE</span><span class="zh">03 — 行业情报</span></div>
+            <h2 class="section-title en">Signals worth<br><em>following.</em></h2>
+            <h2 class="section-title zh">看见行业<br><em>正在发生什么。</em></h2>
           </div>
-          <div class="archive-logo" aria-hidden="true"><div class="circle">J.</div></div>
-        </a>
-        <div class="archive-links">
-          <a class="archive-link" href="https://github.com/Justin-Jr26/foundation-model-radar/blob/main/research/llm-pretraining.md" target="_blank" rel="noopener noreferrer" data-reveal><span class="micro">NOTE / 01</span><strong>LLM Foundation<br>Training</strong><div class="link-end">READ THE NOTE ↗</div></a>
-          <a class="archive-link" href="https://github.com/Justin-Jr26/foundation-model-radar/blob/main/research/multimodal-foundation-models.md" target="_blank" rel="noopener noreferrer" data-reveal><span class="micro">NOTE / 02</span><strong>Multimodal<br>Models</strong><div class="link-end">READ THE NOTE ↗</div></a>
-          <a class="archive-link" href="https://github.com/Justin-Jr26/foundation-model-radar/blob/main/talent/foundation-model-role-map.md" target="_blank" rel="noopener noreferrer" data-reveal><span class="micro">FIELD MAP / 01</span><strong>Foundation Model<br>Role Map</strong><div class="link-end">EXPLORE THE MAP ↗</div></a>
+          <p class="section-sub en">A curated view of the people, companies and technologies shaping the AI ecosystem — from organizational shifts to industry-moving news and talent signals.</p>
+          <p class="section-sub zh">从大厂组织变化、产业链热点到技术与岗位趋势，持续观察 AI 行业正在发生的重要变化。</p>
         </div>
-        <p class="archive-note"><span class="en">Editorial note: the linked articles are introductory technical frameworks, not claims of original model research or current hiring authorization.</span><span class="zh">编辑说明：以上链接目前主要是基础技术框架，不代表原创模型研发成果，也不构成任何公司的实时招聘或招聘授权声明。</span></p>
+        <div class="intel-grid">
+          <article class="intel-card" data-reveal>
+            <div class="intel-meta"><span class="intel-number">01 / ORGANIZATIONS</span><span class="intel-tag">BIG TECH WATCH</span></div>
+            <h3>大厂动态</h3>
+            <p class="intel-lead en">Inside the moves shaping China's leading technology and foundation-model companies.</p>
+            <p class="intel-lead zh">聚焦国内头部大厂及基模团队的组织、业务与关键人物变化。</p>
+            <ul>
+              <li><span class="en">Team structure and organizational changes</span><span class="zh">团队架构、组织调整与业务布局变化</span></li>
+              <li><span class="en">Strategic priorities and policy shifts</span><span class="zh">公司战略、业务政策及重点方向调整</span></li>
+              <li><span class="en">Key executives and technical leaders' public moves</span><span class="zh">核心负责人及技术带头人的公开动向</span></li>
+            </ul>
+            <div class="intel-bottom"><span class="en">UPDATE RHYTHM</span><span class="zh">更新节奏</span><strong class="en">Follow major changes · Regular roundups</strong><strong class="zh">重要变化及时跟进 · 定期汇总</strong></div>
+          </article>
+          <article class="intel-card" data-reveal>
+            <div class="intel-meta"><span class="intel-number">02 / INDUSTRY SIGNALS</span><span class="intel-tag">INDUSTRY NEWS</span></div>
+            <h3>行业新闻</h3>
+            <p class="intel-lead en">The stories and market-moving events across AI models and the industries around them.</p>
+            <p class="intel-lead zh">关注大模型及其上下游产业链中值得关注的热点、爆点与重要事件。</p>
+            <ul>
+              <li><span class="en">Model breakthroughs, product launches and company moves</span><span class="zh">大模型进展、产品发布与重点企业动态</span></li>
+              <li><span class="en">Chips, compute, data centers, cloud and infrastructure</span><span class="zh">芯片、算力、数据中心、云服务与基础设施</span></li>
+              <li><span class="en">Industry-shaping developments, including NVIDIA ecosystem news</span><span class="zh">包括英伟达及相关生态在内的产业链重大热点</span></li>
+            </ul>
+            <div class="intel-bottom"><span class="en">EDITORIAL FOCUS</span><span class="zh">内容重点</span><strong class="en">What happened · Why the industry cares</strong><strong class="zh">事件发生了什么 · 对行业意味着什么</strong></div>
+          </article>
+          <article class="intel-card" data-reveal>
+            <div class="intel-meta"><span class="intel-number">03 / TECHNOLOGY & TALENT</span><span class="intel-tag">TECH TRACKING</span></div>
+            <h3>技术追踪</h3>
+            <p class="intel-lead en">A practical read on emerging technologies, hot roles and the talent market around them.</p>
+            <p class="intel-lead zh">追踪热门技术与热门岗位，研判技术趋势如何转化为真实的人才需求。</p>
+            <ul>
+              <li><span class="en">Emerging technologies and notable technical directions</span><span class="zh">当前热门技术、重要路线及阶段性变化</span></li>
+              <li><span class="en">High-demand roles, skill requirements and talent profiles</span><span class="zh">热门岗位、核心能力要求与人才画像</span></li>
+              <li><span class="en">How technical momentum translates into hiring demand</span><span class="zh">技术热度、落地前景与招聘需求之间的关联研判</span></li>
+            </ul>
+            <div class="intel-bottom"><span class="en">EDITORIAL FOCUS</span><span class="zh">研判重点</span><strong class="en">Technology signals · Role signals</strong><strong class="zh">技术风向 · 岗位风向 · 人才机会</strong></div>
+          </article>
+        </div>
+        <p class="intel-disclaimer en">Editorial standard: coverage is based on public reporting, official announcements and first-hand observations that are authorized for sharing. Confidential internal information and unverified claims will not be published as fact.</p>
+        <p class="intel-disclaimer zh">信息原则：以公开报道、官方发布及获得授权可公开分享的一线观察为基础。涉及内部动态时，仅发布已确认且适合公开传播的信息，不将未经核实的消息作为事实。</p>
       </div>
     </section>
     <section class="contact-section" id="contact">
       <div class="container contact-layout">
         <div>
-          <div class="section-label"><span class="en">05 — CORRESPONDENCE</span><span class="zh">05 — 保持联系</span></div>
+          <div class="section-label"><span class="en">04 — CORRESPONDENCE</span><span class="zh">04 — 保持联系</span></div>
           <h2 class="contact-title en">The next chapter<br>starts with <em>people.</em></h2>
           <h2 class="contact-title zh">下一段故事，<br>从<em>人</em>开始。</h2>
           <p class="contact-copy en">If you work on foundation models, are exploring new career paths, or are building an AI research team, I'd welcome a thoughtful conversation.</p>
